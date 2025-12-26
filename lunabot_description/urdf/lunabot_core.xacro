@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lunabot">
+
+    <!-- ===============================
+         Shared inertial helper macros
+         (box, cylinder, sphere)
+         =============================== -->
+    <xacro:include filename="inertial_macros.xacro"/>
+
+    <!-- ===============================
+         Materials (visual only)
+         =============================== -->
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <!-- ===============================
+         BASE LINK
+         Conceptual reference frame only.
+         No geometry on purpose.
+         This is the root of the TF tree.
+         =============================== -->
+    <link name="base_link"/>
+
+    <!-- ===============================
+         CHASSIS
+         Represents the rover body.
+         Dimensions are approximate.
+         =============================== -->
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <!-- chassis sits slightly above ground -->
+        <origin xyz="0 0 0.15"/>
+    </joint>
+
+    <link name="chassis">
+        <visual>
+            <geometry>
+                <!-- Rough Lunabot body -->
+                <box size="0.8 0.55 0.2"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <box size="0.8 0.55 0.2"/>
+            </geometry>
+        </collision>
+
+        <!-- Not physically accurate.
+             Exists for simulation stability -->
+        <xacro:inertial_box mass="20.0" x="0.8" y="0.55" z="0.2">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- ===============================
+         WHEEL MACRO
+         All four wheels are identical.
+         Skid steer control is handled in software.
+         =============================== -->
+    <xacro:macro name="wheel" params="name x y z">
+        <joint name="${name}_joint" type="continuous">
+            <parent link="base_link"/>
+            <child link="${name}"/>
+            <!-- rotate cylinder so it spins correctly -->
+            <origin xyz="${x} ${y} ${z}" rpy="-${pi/2} 0 0"/>
+            <axis xyz="0 0 1"/>
+        </joint>
+
+        <link name="${name}">
+            <visual>
+                <geometry>
+                    <!-- ~10 inch wheel -->
+                    <cylinder radius="0.127" length="0.1"/>
+                </geometry>
+                <material name="blue"/>
+            </visual>
+
+            <collision>
+                <geometry>
+                    <cylinder radius="0.127" length="0.1"/>
+                </geometry>
+            </collision>
+
+            <!-- Simplified inertia -->
+            <xacro:inertial_cylinder mass="2.0" length="0.1" radius="0.127">
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+            </xacro:inertial_cylinder>
+        </link>
+    </xacro:macro>
+
+    <!-- ===============================
+         FOUR WHEELS (4WD, skid steer)
+         =============================== -->
+
+    <!-- Front Left -->
+    <xacro:wheel name="front_left_wheel"  x="0.35"  y="0.325" z="0"/>
+
+    <!-- Front Right -->
+    <xacro:wheel name="front_right_wheel" x="0.35"  y="-0.325" z="0"/>
+
+    <!-- Rear Left -->
+    <xacro:wheel name="rear_left_wheel"   x="-0.35" y="0.325" z="0"/>
+
+    <!-- Rear Right -->
+    <xacro:wheel name="rear_right_wheel"  x="-0.35" y="-0.325" z="0"/>
+
+</robot>
