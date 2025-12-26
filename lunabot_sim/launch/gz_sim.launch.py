@@ -2,7 +2,11 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import (
+    DeclareLaunchArgument,
+    IncludeLaunchDescription,
+    SetEnvironmentVariable,
+)
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
@@ -11,6 +15,7 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     description_share = get_package_share_directory('lunabot_description')
+    sim_share = get_package_share_directory('lunabot_sim')
 
     default_model_path = os.path.join(
         description_share,
@@ -28,8 +33,19 @@ def generate_launch_description():
         ]
     )
 
+    gz_resource_path = os.environ.get('GZ_SIM_RESOURCE_PATH', '')
+    gz_models_path = os.path.join(sim_share, 'models')
+    if gz_resource_path:
+        gz_resource_path = f'{gz_resource_path}:{gz_models_path}'
+    else:
+        gz_resource_path = gz_models_path
+
     return LaunchDescription(
         [
+            SetEnvironmentVariable(
+                name='GZ_SIM_RESOURCE_PATH',
+                value=gz_resource_path,
+            ),
             DeclareLaunchArgument(
                 name='model',
                 default_value=default_model_path,
