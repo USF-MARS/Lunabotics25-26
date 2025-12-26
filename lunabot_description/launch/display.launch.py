@@ -8,8 +8,8 @@ from launch_ros.actions import Node
 def generate_launch_description():
     pkg_share = get_package_share_directory('lunabot_description')
     
-    # Path to the dummy URDF we just made
-    default_model_path = os.path.join(pkg_share, 'urdf', 'lunabot.urdf') 
+    # Path to the robot xacro
+    default_model_path = os.path.join(pkg_share, 'urdf', 'lunabot.urdf.xacro')
     
     return LaunchDescription([
         DeclareLaunchArgument(name='model', default_value=default_model_path,
