@@ -19,5 +19,5 @@ diff_drive_controller:
     wheel_separation: 0.65
     wheel_radius: 0.127
     base_frame_id: base_link
-    publish_rate: 50.0
+    publish_rate: 50
     use_stamped_vel: false
