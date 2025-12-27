@@ -63,7 +63,7 @@ def generate_launch_description():
                     )
                 ),
                 launch_arguments={
-                    'gz_args': ['-r ', LaunchConfiguration('world')]
+                    'gz_args': ['-r', LaunchConfiguration('world')]
                 }.items(),
             ),
             Node(
@@ -72,7 +72,7 @@ def generate_launch_description():
                 parameters=[
                     {
                         'robot_description': Command(
-                            ['xacro ', LaunchConfiguration('model')]
+                            ['xacro', LaunchConfiguration('model')]
                         ),
                         'use_sim_time': True,
                     }
