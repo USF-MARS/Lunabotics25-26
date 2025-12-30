@@ -11,7 +11,7 @@ Motors: 12 V CIM brushed DC
 Gear reduction: ~100:1 per wheel
 Wheel diameter: ~10 in
 Motor drivers: Sabertooth 2x60
-Encoders: CIMcoderr
+Encoders: CIMcoder
 
 
 Motor and Torque Analysis
