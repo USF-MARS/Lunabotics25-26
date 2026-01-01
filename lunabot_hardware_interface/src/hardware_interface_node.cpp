@@ -1,4 +1,10 @@
-// Assumptions:\n+// - Teensy and host use little-endian float/int32 encoding for packet fields.\n+// - Checksum is the 8-bit sum of all bytes excluding the checksum byte.\n+// - Encoder tick counts are cumulative and increasing in forward direction.\n+// - Wheel radius and wheel base are provided via parameters and remain constant at runtime.\n+// - Actuator ADC min/max map linearly to normalized position [0.0, 1.0].\n+#include \"lunabot_hardware_interface/actuator_interface.hpp\"
+// Assumptions:
+// - Teensy and host use little-endian float/int32 encoding for packet fields.
+// - Checksum is the 8-bit sum of all bytes excluding the checksum byte.
+// - Encoder tick counts are cumulative and increasing in forward direction.
+// - Wheel radius and wheel base are provided via parameters and remain constant at runtime.
+// - Actuator ADC min/max map linearly to normalized position [0.0, 1.0].
+#include "lunabot_hardware_interface/actuator_interface.hpp"
 #include "lunabot_hardware_interface/drivetrain_interface.hpp"
 #include "lunabot_hardware_interface/teensy_transport.hpp"
 
