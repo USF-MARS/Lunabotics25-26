@@ -4,7 +4,7 @@ welcome to University of South Florida's Mechatronics & Robotic Systems' first N
 
 This repo will be used for ROS2 Production
 Drivetrain system
-System Overview
+System Overvieww
 Rover mass (target): ~55 kg
 Drive: 4WD, independent wheel drives
 Motors: 12 V CIM brushed DC
