@@ -8,6 +8,8 @@
 #include <micro_ros_utilities/type_utilities.h>
 #include <micro_ros_utilities/string_utilities.h>
 
+#include "imu.h"
+
 // --- CONFIGURATION ---
 #define HWT_SERIAL Serial1
 #define HWT_BAUD 115200       
@@ -18,10 +20,7 @@
 // --- ROS VARIABLES ---
 rcl_publisher_t publisher;       
 sensor_msgs__msg__Imu * imu_msg;
-rclc_executor_t executor;        
-rclc_support_t support;           
 rcl_allocator_t allocator;        
-rcl_node_t node;                  
 rcl_timer_t timer;                
 
 // --- SYNC VARIABLES ---
@@ -129,60 +128,49 @@ void timer_callback(rcl_timer_t * timer, int64_t last_call_time)
   RCSOFTCHECK(rcl_publish(&publisher, imu_msg, NULL));
 }
 
-void setup() {
-  set_microros_transports(); 
-  
-  pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH); 
-  
+void imu_init(rcl_node_t *node, rclc_executor_t *executor, rclc_support_t *support) {
   HWT_SERIAL.begin(HWT_BAUD);
-  delay(1000); 
+  delay(1000);
 
-  // --- NEW: INITIAL TIME SYNC ---
+  // --- INITIAL TIME SYNC ---
   // Block until we get a valid time from the Agent.
   // Crucial for Robot Localization to accept the first messages.
   const int timeout_ms = 1000;
-  while(rmw_uros_sync_session(timeout_ms) != RMW_RET_OK) {
-     // Flash LED to indicate we are waiting for Agent connection
-     digitalWrite(LED_PIN, !digitalRead(LED_PIN));
-     delay(100);
+  while (rmw_uros_sync_session(timeout_ms) != RMW_RET_OK) {
+    // Flash LED to indicate we are waiting for Agent connection
+    digitalWrite(LED_PIN, !digitalRead(LED_PIN));
+    delay(100);
   }
   digitalWrite(LED_PIN, HIGH); // Solid light = Connected & Synced
-  // -----------------------------
 
   allocator = rcl_get_default_allocator();
 
-  RCCHECK(rclc_support_init(&support, 0, NULL, &allocator));
-  RCCHECK(rclc_node_init_default(&node, "teensy_imu_node", "", &support));
-
   RCCHECK(rclc_publisher_init_default(
     &publisher,
-    &node,
+    node,
     ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
     "/imu/data"));
 
   RCCHECK(rclc_timer_init_default(
     &timer,
-    &support,
+    support,
     RCL_MS_TO_NS(20),
     timer_callback));
 
-  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
-  RCCHECK(rclc_executor_add_timer(&executor, &timer));
+  RCCHECK(rclc_executor_add_timer(executor, &timer));
 
-  if(!micro_ros_utilities_create_message_memory(
-      ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
-      &imu_msg,
-      (micro_ros_utilities_memory_conf_t) {})
-    )
-  {
+  if (!micro_ros_utilities_create_message_memory(
+        ROSIDL_GET_MSG_TYPE_SUPPORT(sensor_msgs, msg, Imu),
+        &imu_msg,
+        (micro_ros_utilities_memory_conf_t) {})
+    ) {
     error_loop();
   }
 
   imu_msg->header.frame_id = micro_ros_string_utilities_set(imu_msg->header.frame_id, "imu_link");
-  
+
   // Set Covariances
-  for(int i=0; i<9; i++) {
+  for (int i = 0; i < 9; i++) {
     imu_msg->orientation_covariance[i] = 0.0;
     imu_msg->angular_velocity_covariance[i] = 0.0;
     imu_msg->linear_acceleration_covariance[i] = 0.0;
@@ -198,19 +186,16 @@ void setup() {
   imu_msg->linear_acceleration_covariance[8] = 0.01;
 }
 
-void loop() {
+void imu_update() {
   // 1. Process Sensor Data
-  read_imu(); 
+  read_imu();
 
   // 2. Periodic Time Sync
   // Crystals drift. We re-sync every 60 seconds.
   // We use the millis() timer so we don't block the loop unnecessarily.
   if (millis() - last_sync_time > SYNC_INTERVAL) {
-      last_sync_time = millis();
-      // Attempt to sync. If it fails, we keep going with the old offset.
-      rmw_uros_sync_session(100); 
+    last_sync_time = millis();
+    // Attempt to sync. If it fails, we keep going with the old offset.
+    rmw_uros_sync_session(100);
   }
-
-  // 3. Handle ROS communication
-  RCSOFTCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(1))); 
 }
