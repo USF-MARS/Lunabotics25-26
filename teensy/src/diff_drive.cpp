@@ -1,10 +1,22 @@
 #include "diff_drive.h"
 
-// INTERNAL MEMORY:
-// We need to remember how fast we were going 10 milliseconds ago 
-// so we can calculate the "ramp" (smooth acceleration).
+// ==========================================
+//          INTERNAL MEMORY
+// ==========================================
+
+// We remember the current speed so we can change it gradually.
 static float current_linear_speed = 0.0f;
 static float current_angular_speed = 0.0f;
+
+// We need to track TIME to make acceleration smooth.
+static unsigned long last_ramp_time = 0;
+
+// RAMPING SETTINGS (ACCELERATION LIMITS)
+// How fast are we allowed to change speed?
+// 2.0 means we can go from 0 to 2.0 m/s in exactly 1 second.
+// Since max speed is 1.5 m/s, it will take about 0.75 seconds to hit full throttle.
+const float kLinearAccelLimit = 2.0f;  // Meters per second per second
+const float kAngularAccelLimit = 4.0f; // Radians per second per second
 
 // The Sabertooth controller has two output channels: Motor 1 and Motor 2.
 static const uint8_t kMotor1 = 1;
@@ -13,11 +25,10 @@ static const uint8_t kMotor2 = 2;
 // ==========================================
 //        INTERNAL HELPER FUNCTIONS
 // ==========================================
-// (These are "private" tools used only inside this file)
 
 // TOOL 1: Number Clamper
 // The Sabertooth controller requires a number between 0 and 127.
-// This function ensures we never accidentally send 128 or -1, which would confuse it.
+// This function ensures we never accidentally send 128 or -1.
 static uint8_t clamp_7bit(int value) {
   if (value < 0) return 0;
   if (value > 127) return 127;
@@ -27,36 +38,32 @@ static uint8_t clamp_7bit(int value) {
 // TOOL 2: Speed Converter
 // We think in percentages (-1.0 is full reverse, 1.0 is full forward).
 // The Sabertooth thinks in numbers (-127 to 127).
-// This function translates our language to the motor's language.
+// This translates our language to the motor's language.
 static int speed_from_normalized(float speed) {
-  // Hard limit to ensure we never exceed 100%
   if (speed > 1.0f) speed = 1.0f;
   if (speed < -1.0f) speed = -1.0f;
   return static_cast<int>(speed * 127.0f);
 }
 
-// TOOL 3: The "Soft Start" Logic
-// This compares where we ARE (current) vs where we WANT to be (target).
-// If the difference is too big, it only takes a small step (step) towards the target.
-// This prevents the robot from doing a wheelie or stripping gears.
-static float ramp_value(float current, float target, float step) {
-  float difference = target - current;
-  
-  // Accelerating forward too fast? Limit it.
-  if (difference > step) return current + step;
-  
-  // Accelerating backward too fast? Limit it.
-  if (difference < -step) return current - step;
-  
-  // If the change is small/safe, just go there immediately.
-  return target;
+// TOOL 3: Time-Based Smoother
+// This calculates the new speed based on how much TIME has passed.
+// current: The speed we are going right now.
+// target:  The speed the laptop WANTS us to go.
+// max_rate: How fast we are allowed to change speed (per second).
+// dt:      How many seconds have passed since the last update.
+static float ramp_value_time(float current, float target, float max_rate, float dt) {
+  float error = target - current;
+  float max_step = max_rate * dt; // The biggest jump we are allowed to make right now
+
+  if (error > max_step) return current + max_step;  // Accelerate Forward
+  if (error < -max_step) return current - max_step; // Accelerate Backward
+  return target; // We are close enough, just go to the target
 }
 
 // TOOL 4: The Messenger
-// This sends the actual data byte to the motor controller.
-// It calculates a "Checksum" (a math check) so the controller knows the message didn't get corrupted by static noise.
+// Sends the data byte to the motor controller with a Checksum.
 static void sabertooth_write(uint8_t address, uint8_t command, uint8_t data) {
-  uint8_t checksum = (address + command + data) & 0x7F; // Required math by Sabertooth
+  uint8_t checksum = (address + command + data) & 0x7F; 
   Serial1.write(address);
   Serial1.write(command);
   Serial1.write(data);
@@ -64,11 +71,10 @@ static void sabertooth_write(uint8_t address, uint8_t command, uint8_t data) {
 }
 
 // TOOL 5: Motor Commander
-// Sends a command to a specific motor (Left or Right) on a specific board (Front or Rear).
+// Sends a command to a specific motor.
 static void sabertooth_set_motor(uint8_t address, uint8_t motor, int speed) {
   if (motor != kMotor1 && motor != kMotor2) return;
   
-  // The Sabertooth has different command codes for "Drive Forward" vs "Drive Backward"
   // 0 & 4 = Forward. 1 & 5 = Backward.
   uint8_t command_forward = (motor == kMotor1) ? 0 : 4;
   uint8_t command_backward = (motor == kMotor1) ? 1 : 5;
@@ -76,7 +82,6 @@ static void sabertooth_set_motor(uint8_t address, uint8_t motor, int speed) {
   if (speed >= 0) {
     sabertooth_write(address, command_forward, clamp_7bit(speed));
   } else {
-    // If speed is negative, we make it positive and send the "Backward" command code
     sabertooth_write(address, command_backward, clamp_7bit(-speed));
   }
 }
@@ -87,17 +92,16 @@ static void sabertooth_set_motor(uint8_t address, uint8_t motor, int speed) {
 
 void drive_init() {
   Serial1.begin(kSabertoothBaud);
+  last_ramp_time = millis(); // Start the clock
 }
 
 // SAFETY STOP
 void drive_stop() {
-  // Send "0 speed" to all 4 motors immediately.
   sabertooth_set_motor(kSabertoothFrontAddr, kMotor1, 0);
   sabertooth_set_motor(kSabertoothFrontAddr, kMotor2, 0);
   sabertooth_set_motor(kSabertoothRearAddr, kMotor1, 0);
   sabertooth_set_motor(kSabertoothRearAddr, kMotor2, 0);
   
-  // Important: Forget our previous speed so we don't accidentally "resume" moving later.
   current_linear_speed = 0.0f;
   current_angular_speed = 0.0f;
 }
@@ -105,40 +109,48 @@ void drive_stop() {
 // THE MAIN LOGIC
 void drive_command(float target_linear, float target_angular) {
   
-  // STEP 1: Safety Check
-  // If the laptop asks for 1000 mph, we cap it at our max speed.
+  // 1. Calculate Time Passed (dt)
+  // We need to know if it's been 0.01 seconds or 0.1 seconds since the last command
+  // so we can calculate exactly how much to increase speed.
+  unsigned long now = millis();
+  float dt = (now - last_ramp_time) / 1000.0f; // Convert milliseconds to seconds
+  last_ramp_time = now;
+
+  // Safety: If the time gap is huge (first run or lag), pretend it's small
+  // so the robot doesn't jump unexpectedly.
+  if (dt > 0.1f) dt = 0.1f;
+
+  // 2. Cap inputs to max limits
   if (target_linear > kMaxLinearMps) target_linear = kMaxLinearMps;
   if (target_linear < -kMaxLinearMps) target_linear = -kMaxLinearMps;
   if (target_angular > kMaxAngularRadps) target_angular = kMaxAngularRadps;
   if (target_angular < -kMaxAngularRadps) target_angular = -kMaxAngularRadps;
 
-  // STEP 2: Smooth the inputs (Ramping)
-  // Instead of jumping instantly to the target, we step towards it.
-  current_linear_speed = ramp_value(current_linear_speed, target_linear, kRampStep);
-  current_angular_speed = ramp_value(current_angular_speed, target_angular, kRampStep);
+  // 3. Smooth the Speed (Ramping)
+  current_linear_speed = ramp_value_time(current_linear_speed, target_linear, kLinearAccelLimit, dt);
+  current_angular_speed = ramp_value_time(current_angular_speed, target_angular, kAngularAccelLimit, dt);
 
-  // STEP 3: "Mixing" (Differential Drive Math)
-  // How do we turn? We spin the left wheels slower and right wheels faster (or vice versa).
-  // Left Speed  = Forward Speed - Turning Speed
-  // Right Speed = Forward Speed + Turning Speed
+  // 4. Differential Drive Math (The Mixing)
+  // Left = Forward - Turn
+  // Right = Forward + Turn
   float left_mps = current_linear_speed - (current_angular_speed * kTrackWidthMeters * 0.5f);
   float right_mps = current_linear_speed + (current_angular_speed * kTrackWidthMeters * 0.5f);
 
-  // STEP 4: Convert m/s to Percentage
+  // 5. Convert to Percentages
   float left_norm = left_mps / kMaxLinearMps;
   float right_norm = right_mps / kMaxLinearMps;
 
-  // STEP 5: Convert Percentage to Sabertooth integers (-127 to 127)
+  // 6. Convert to Sabertooth Integers
   int left_cmd = speed_from_normalized(left_norm);
   int right_cmd = speed_from_normalized(right_norm);
 
-  // STEP 6: Send the result to the physical hardware
+  // 7. Send to Hardware
   
-  // Front Axle (Controller 128)
+  // Front Axle
   sabertooth_set_motor(kSabertoothFrontAddr, kMotor1, left_cmd);
   sabertooth_set_motor(kSabertoothFrontAddr, kMotor2, right_cmd);
   
-  // Rear Axle (Controller 129)
+  // Rear Axle
   sabertooth_set_motor(kSabertoothRearAddr, kMotor1, left_cmd);
   sabertooth_set_motor(kSabertoothRearAddr, kMotor2, right_cmd);
 }

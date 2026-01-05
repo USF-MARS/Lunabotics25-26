@@ -128,6 +128,5 @@ void loop() {
     drive_stop();
     digitalWrite(LED_PIN, LOW);
   }
-
-  delay(10); // Small pause to let the processor breathe
+  
 }
