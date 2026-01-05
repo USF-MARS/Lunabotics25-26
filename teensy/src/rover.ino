@@ -8,6 +8,8 @@
 
 // Link to our custom drive code
 #include "diff_drive.h"
+#include "imu.h"
+#include "encoder.h"
 
 // ==========================================
 //          ROS SETUP (The Plumbing)
@@ -96,8 +98,14 @@ void setup() {
 
   // 3. Create the Executor
   //    This links the "Subscriber" to the "callback function" above.
-  RCCHECK(rclc_executor_init(&executor, &support.context, 1, &allocator));
+  RCCHECK(rclc_executor_init(&executor, &support.context, 3, &allocator));
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
+
+  // 4. Initialize IMU publishing and time sync
+  imu_init(&node, &executor, &support);
+
+  // 5. Initialize wheel encoder publishing
+  encoder_init(&node, &executor, &support);
 
   last_cmd_ms = millis();
 }
@@ -106,6 +114,9 @@ void setup() {
 //          LOOP (Runs Forever)
 // ==========================================
 void loop() {
+  imu_update();
+  encoder_update();
+
   // 1. Check for new messages from the laptop
   //    This will trigger 'subscription_callback' if a message is waiting.
   RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(20)));
