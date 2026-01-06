@@ -10,6 +10,7 @@
 #include "diff_drive.h"
 #include "imu.h"
 #include "encoder.h"
+#include "actuator.h" // <--- NEW: Added Actuator Library
 
 // ==========================================
 //          ROS SETUP (The Plumbing)
@@ -97,8 +98,11 @@ void setup() {
     "cmd_vel"));
 
   // 3. Create the Executor
-  //    This links the "Subscriber" to the "callback function" above.
-  RCCHECK(rclc_executor_init(&executor, &support.context, 3, &allocator));
+  //    IMPORTANT: We increased the number of handles from 3 to 6!
+  //    (1 Drive Sub + 1 IMU Timer + 1 Encoder Timer + 1 Lift Sub + 1 Tilt Sub + 1 Actuator Timer = 6)
+  RCCHECK(rclc_executor_init(&executor, &support.context, 6, &allocator));
+  
+  // Add the Drive Subscriber
   RCCHECK(rclc_executor_add_subscription(&executor, &subscriber, &msg, &subscription_callback, ON_NEW_DATA));
 
   // 4. Initialize IMU publishing and time sync
@@ -107,6 +111,9 @@ void setup() {
   // 5. Initialize wheel encoder publishing
   encoder_init(&node, &executor, &support);
 
+  // 6. Initialize Actuators (Lift & Tilt) <--- NEW
+  actuator_init(&node, &executor, &support);
+
   last_cmd_ms = millis();
 }
 
@@ -114,11 +121,16 @@ void setup() {
 //          LOOP (Runs Forever)
 // ==========================================
 void loop() {
+  // Update Sensors
   imu_update();
   encoder_update();
+  
+  // Update Actuators (Run PID Controllers) <--- NEW
+  actuator_update();
 
   // 1. Check for new messages from the laptop
   //    This will trigger 'subscription_callback' if a message is waiting.
+  //    (Note: Removed delay(10) so the PID loops run fast and smooth)
   RCCHECK(rclc_executor_spin_some(&executor, RCL_MS_TO_NS(20)));
 
   // 2. Safety Watchdog Check
@@ -128,5 +140,4 @@ void loop() {
     drive_stop();
     digitalWrite(LED_PIN, LOW);
   }
-  
 }
