@@ -20,7 +20,7 @@ Total drivetrain torque: ~960 N·m
 Realistic
 We are limiting current to 80A max to protect components. Underload it will pull about 40-70A. This translates to, assuming 11 inch wheels:
 65-110 Nm per wheel
-260-440 Nm total
+260-440 Nm totall
 
 
 This torque far exceeds available traction, ensuring the system is traction-limited, not motor-limited. T
