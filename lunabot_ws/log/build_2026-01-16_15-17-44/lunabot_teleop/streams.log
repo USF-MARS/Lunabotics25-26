@@ -1,0 +1,44 @@
+[0.010s] Invoking command in '/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sam/Desktop/Lunabotics25-26/lunabot_ws/src/lunabot_teleop -DCMAKE_INSTALL_PREFIX=/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop
+[0.200s] -- The C compiler identification is GNU 13.3.0
+[0.345s] -- The CXX compiler identification is GNU 13.3.0
+[0.372s] -- Detecting C compiler ABI info
+[0.473s] -- Detecting C compiler ABI info - done
+[0.479s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.480s] -- Detecting C compile features
+[0.481s] -- Detecting C compile features - done
+[0.495s] -- Detecting CXX compiler ABI info
+[0.589s] -- Detecting CXX compiler ABI info - done
+[0.595s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.596s] -- Detecting CXX compile features
+[0.596s] -- Detecting CXX compile features - done
+[0.600s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.315s] -- Found Python3: /home/sam/.pyenv/shims/python3 (found version "3.12.10") found components: Interpreter 
+[1.659s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.018s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.180s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.424s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.610s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.304s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.362s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.701s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[3.741s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.782s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.988s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[4.110s] Traceback (most recent call last):
+[4.110s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[4.110s]     from catkin_pkg.package import parse_package_string
+[4.111s] ModuleNotFoundError: No module named 'catkin_pkg'
+[4.113s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[4.113s]   execute_process(/home/sam/.pyenv/shims/python3
+[4.113s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[4.113s]   /home/sam/Desktop/Lunabotics25-26/lunabot_ws/src/lunabot_teleop/package.xml
+[4.114s]   /home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/ament_cmake_core/package.cmake)
+[4.114s]   returned error code 1
+[4.114s] Call Stack (most recent call first):
+[4.114s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[4.114s]   /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[4.114s]   CMakeLists.txt:21 (ament_lint_auto_find_test_dependencies)
+[4.114s] 
+[4.114s] [0m
+[4.114s] -- Configuring incomplete, errors occurred!
+[4.124s] Invoked command in '/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sam/Desktop/Lunabotics25-26/lunabot_ws/src/lunabot_teleop -DCMAKE_INSTALL_PREFIX=/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop

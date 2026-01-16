@@ -1,0 +1,15 @@
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/ament_index/resource_index/package_run_dependencies/lunabot_teleop
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/ament_index/resource_index/parent_prefix_path/lunabot_teleop
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/ament_prefix_path.sh
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/ament_prefix_path.dsv
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/path.sh
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/path.dsv
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.bash
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.sh
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.zsh
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.dsv
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.dsv
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/ament_index/resource_index/packages/lunabot_teleop
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/cmake/lunabot_teleopConfig.cmake
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/cmake/lunabot_teleopConfig-version.cmake
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.xml
