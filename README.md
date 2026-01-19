@@ -8,7 +8,6 @@ Wheel diameter: ~10 in
 Motor drivers: Sabertooth 2x60
 Encoders: CIMcoder
 
-
 Motor and Torque Analysis
 CIM motor (12 V):
 Free speed: ~5310 rpm
