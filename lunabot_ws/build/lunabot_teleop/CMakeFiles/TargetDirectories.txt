@@ -1,0 +1,9 @@
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/uninstall.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/lunabot_teleop_uninstall.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/test.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/edit_cache.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/rebuild_cache.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/list_install_components.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/install.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/install/local.dir
+/home/sam/Desktop/Lunabotics25-26/lunabot_ws/build/lunabot_teleop/CMakeFiles/install/strip.dir
