@@ -1,0 +1,4 @@
+source;share/lunabot_teleop/local_setup.bash
+source;share/lunabot_teleop/local_setup.dsv
+source;share/lunabot_teleop/local_setup.sh
+source;share/lunabot_teleop/local_setup.zsh

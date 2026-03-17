@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "drive_base_msgs__py",
+		"source" : "/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs/drive_base_msgs__py"
+	}
+}
