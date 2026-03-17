@@ -1,4 +1,0 @@
-source;share/lunabot_bringup/local_setup.bash
-source;share/lunabot_bringup/local_setup.dsv
-source;share/lunabot_bringup/local_setup.sh
-source;share/lunabot_bringup/local_setup.zsh

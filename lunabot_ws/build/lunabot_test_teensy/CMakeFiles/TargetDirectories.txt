@@ -1,9 +1,0 @@
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/uninstall.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/lunabot_test_teensy_uninstall.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/test.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/edit_cache.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/rebuild_cache.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/list_install_components.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/install.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/install/local.dir
-/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy/CMakeFiles/install/strip.dir
