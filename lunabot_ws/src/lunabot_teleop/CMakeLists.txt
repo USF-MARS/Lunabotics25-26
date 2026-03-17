@@ -8,6 +8,8 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -20,5 +22,12 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+add_executable(joy_to_cmd_vel src/joy_to_cmd_vel.cpp)
+ament_target_dependencies(joy_to_cmd_vel rclcpp sensor_msgs geometry_msgs)
+
+install(TARGETS
+  joy_to_cmd_vel
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

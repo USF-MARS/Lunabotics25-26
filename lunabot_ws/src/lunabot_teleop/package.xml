@@ -4,12 +4,14 @@
   <name>lunabot_teleop</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="sam@todo.todo">sam</maintainer>
+  <maintainer email="mars@todo.todo">mars</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
