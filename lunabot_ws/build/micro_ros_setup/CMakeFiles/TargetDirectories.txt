@@ -1,0 +1,9 @@
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/uninstall.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/micro_ros_setup_uninstall.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/test.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/edit_cache.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/rebuild_cache.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/list_install_components.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/install.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/install/local.dir
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup/CMakeFiles/install/strip.dir

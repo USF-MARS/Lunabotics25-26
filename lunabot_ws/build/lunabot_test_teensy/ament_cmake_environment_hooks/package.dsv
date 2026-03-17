@@ -1,0 +1,4 @@
+source;share/lunabot_test_teensy/local_setup.bash
+source;share/lunabot_test_teensy/local_setup.dsv
+source;share/lunabot_test_teensy/local_setup.sh
+source;share/lunabot_test_teensy/local_setup.zsh

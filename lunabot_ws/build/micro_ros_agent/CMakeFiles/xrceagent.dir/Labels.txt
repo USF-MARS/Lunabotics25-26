@@ -1,0 +1,13 @@
+# Target labels
+ xrceagent
+# Source files and their labels
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/CMakeFiles/xrceagent
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/CMakeFiles/xrceagent.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/CMakeFiles/xrceagent-complete.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-build.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-configure.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-download.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-install.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-mkdir.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-patch.rule
+/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent/agent/src/xrceagent-stamp/xrceagent-update.rule
