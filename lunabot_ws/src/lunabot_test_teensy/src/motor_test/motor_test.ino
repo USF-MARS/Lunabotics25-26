@@ -7,6 +7,10 @@
 #include <geometry_msgs/msg/twist.h>
 #include <ctype.h>
 
+// --- Hardware Toggles ---
+// Change to true if the right motors spin backward when commanded forward
+const bool invert_right_side = false; 
+
 // --- Locale Fix for Teensy/micro-ROS ---
 #ifdef __locale_ctype_ptr
 #undef __locale_ctype_ptr
@@ -54,24 +58,33 @@ void subscription_callback(const void * msvin) {
   float linear_x = msg->linear.x;   // Forward/Backward
   float angular_z = msg->angular.z; // Left/Right rotation
 
-  // --- Differential Drive Logic ---
-  // Left = Linear - Angular | Right = Linear + Angular
+  // --- Differential Drive Logic (Arcade Mix) ---
   float left_val  = linear_x - angular_z;
   float right_val = linear_x + angular_z;
 
-  // Constrain results to -1.0 to 1.0 range
-  left_val  = constrain(left_val, -1.0, 1.0);
-  right_val = constrain(right_val, -1.0, 1.0);
+  // --- Normalization ---
+  // If the requested speed exceeds 1.0, scale both sides down proportionally
+  // so the rover maintains its turning arc.
+  float max_val = max(abs(left_val), abs(right_val));
+  if (max_val > 1.0) {
+    left_val /= max_val;
+    right_val /= max_val;
+  }
+
+  // Handle hardware mirroring if necessary
+  if (invert_right_side) {
+    right_val = -right_val;
+  }
 
   // Map to PWM values
   int leftPWM  = neutral + (int)(left_val * range);
   int rightPWM = neutral + (int)(right_val * range);
   
-  // Write to Left H-Bridge
+  // Write to Left H-Bridge/ESCs
   analogWrite(motorLeft1, leftPWM);
   analogWrite(motorLeft2, leftPWM);
 
-  // Write to Right H-Bridge
+  // Write to Right H-Bridge/ESCs
   analogWrite(motorRight1, rightPWM);
   analogWrite(motorRight2, rightPWM);
 }
