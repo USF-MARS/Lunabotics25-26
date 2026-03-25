@@ -1,0 +1,710 @@
+[0.090s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.090s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7acc79015e80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7acc79192420>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7acc79192420>>)
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.124s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.124s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mars/Documents/Lunabotics25-26/lunabot_ws'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_bringup) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lunabot_bringup' with type 'ros.ament_cmake' and name 'lunabot_bringup'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_hardware) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lunabot_hardware' with type 'ros.ament_cmake' and name 'lunabot_hardware'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_teleop) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lunabot_teleop' with type 'ros.ament_cmake' and name 'lunabot_teleop'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/lunabot_test_teensy) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lunabot_test_teensy' with type 'ros.ament_cmake' and name 'lunabot_test_teensy'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/micro_ros_setup) by extension 'ros'
+[0.155s] DEBUG:colcon.colcon_core.package_identification:Package 'src/micro_ros_setup' with type 'ros.ament_cmake' and name 'micro_ros_setup'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/drive_base/drive_base_msgs) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uros/drive_base/drive_base_msgs' with type 'ros.ament_cmake' and name 'drive_base_msgs'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['cmake', 'python']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'cmake'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'python'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extensions ['python_setup_py']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/micro_ros_agent) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uros/micro-ROS-Agent/micro_ros_agent' with type 'ros.ament_cmake' and name 'micro_ros_agent'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap) by extension 'python_setup_py'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/hooks) by extension 'python_setup_py'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'ros'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['cmake', 'python']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'cmake'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'python'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extensions ['python_setup_py']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro-ROS-Agent/snap/local) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/uros/micro_ros_msgs) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/uros/micro_ros_msgs' with type 'ros.ament_cmake' and name 'micro_ros_msgs'
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.178s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.178s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.180s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/mars/Documents/Lunabotics25-26/lunabot_ws/install
+[0.181s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 289 installed packages in /opt/ros/jazzy
+[0.182s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'cmake_target' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'drive_base_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.223s] DEBUG:colcon.colcon_core.verb:Building package 'drive_base_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/drive_base/drive_base_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.223s] Level 5:colcon.colcon_core.verb:set package 'lunabot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.223s] DEBUG:colcon.colcon_core.verb:Building package 'lunabot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'cmake_target' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'cmake_clean_cache' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'cmake_clean_first' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'cmake_force_configure' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'ament_cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'catkin_cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_hardware' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.224s] DEBUG:colcon.colcon_core.verb:Building package 'lunabot_hardware' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_hardware', 'symlink_install': False, 'test_result_base': None}
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'cmake_target' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.224s] DEBUG:colcon.colcon_core.verb:Building package 'lunabot_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_teleop', 'symlink_install': False, 'test_result_base': None}
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'cmake_args' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'cmake_target' from command line to 'None'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.224s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'lunabot_test_teensy' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'lunabot_test_teensy' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_test_teensy', 'symlink_install': False, 'test_result_base': None}
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/micro_ros_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'cmake_target' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'cmake_clean_first' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'cmake_force_configure' from command line to 'False'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'ament_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.225s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_setup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.225s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_setup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/micro_ros_setup', 'symlink_install': False, 'test_result_base': None}
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_cache' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_clean_first' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'cmake_force_configure' from command line to 'False'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'ament_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_cmake_args' from command line to 'None'
+[0.226s] Level 5:colcon.colcon_core.verb:set package 'micro_ros_agent' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.226s] DEBUG:colcon.colcon_core.verb:Building package 'micro_ros_agent' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent', 'merge_install': False, 'path': '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/micro-ROS-Agent/micro_ros_agent', 'symlink_install': False, 'test_result_base': None}
+[0.226s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.227s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.227s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/micro_ros_msgs' with build type 'ament_cmake'
+[0.227s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/micro_ros_msgs'
+[0.230s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.231s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.231s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.236s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/drive_base/drive_base_msgs' with build type 'ament_cmake'
+[0.236s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/drive_base/drive_base_msgs'
+[0.236s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.236s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.239s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_bringup' with build type 'ament_cmake'
+[0.239s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_bringup'
+[0.239s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.239s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.243s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_hardware' with build type 'ament_cmake'
+[0.243s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_hardware'
+[0.243s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.243s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.249s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs -- -j4 -l4
+[0.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs -- -j4 -l4
+[0.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup -- -j4 -l4
+[0.270s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware -- -j4 -l4
+[0.307s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup -- -j4 -l4
+[0.319s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup
+[0.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware -- -j4 -l4
+[0.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware
+[0.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_bringup)
+[0.342s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup
+[0.352s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup' for CMake module files
+[0.353s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup' for CMake config files
+[0.359s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_bringup', 'cmake_prefix_path')
+[0.359s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/hook/cmake_prefix_path.ps1'
+[0.360s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/hook/cmake_prefix_path.dsv'
+[0.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/hook/cmake_prefix_path.sh'
+[0.361s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/bin'
+[0.361s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/lib/pkgconfig/lunabot_bringup.pc'
+[0.367s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/lib/python3.12/site-packages'
+[0.367s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/bin'
+[0.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.ps1'
+[0.368s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.dsv'
+[0.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.sh'
+[0.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.bash'
+[0.373s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.zsh'
+[0.374s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/colcon-core/packages/lunabot_bringup)
+[0.374s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_bringup)
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup' for CMake module files
+[0.380s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup' for CMake config files
+[0.380s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_bringup', 'cmake_prefix_path')
+[0.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/hook/cmake_prefix_path.ps1'
+[0.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/hook/cmake_prefix_path.dsv'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/hook/cmake_prefix_path.sh'
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/bin'
+[0.386s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/lib/pkgconfig/lunabot_bringup.pc'
+[0.386s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/lib/python3.12/site-packages'
+[0.386s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/bin'
+[0.389s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.ps1'
+[0.389s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.dsv'
+[0.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.sh'
+[0.390s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.bash'
+[0.391s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.zsh'
+[0.391s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/colcon-core/packages/lunabot_bringup)
+[0.396s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_teleop' with build type 'ament_cmake'
+[0.396s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_teleop'
+[0.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.396s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_hardware)
+[0.410s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware' for CMake module files
+[0.410s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware' for CMake config files
+[0.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_hardware', 'cmake_prefix_path')
+[0.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/hook/cmake_prefix_path.ps1'
+[0.411s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/hook/cmake_prefix_path.dsv'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/hook/cmake_prefix_path.sh'
+[0.412s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_hardware
+[0.414s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/bin'
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/lib/pkgconfig/lunabot_hardware.pc'
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/lib/python3.12/site-packages'
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/bin'
+[0.418s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.ps1'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.dsv'
+[0.423s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.sh'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.bash'
+[0.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.zsh'
+[0.429s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/colcon-core/packages/lunabot_hardware)
+[0.430s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_hardware)
+[0.436s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware' for CMake module files
+[0.436s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware' for CMake config files
+[0.437s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_hardware', 'cmake_prefix_path')
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/hook/cmake_prefix_path.ps1'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/hook/cmake_prefix_path.dsv'
+[0.438s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/hook/cmake_prefix_path.sh'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/bin'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/lib/pkgconfig/lunabot_hardware.pc'
+[0.444s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/lib/python3.12/site-packages'
+[0.445s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/bin'
+[0.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.ps1'
+[0.451s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.dsv'
+[0.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.sh'
+[0.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.bash'
+[0.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/lunabot_hardware/package.zsh'
+[0.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware/share/colcon-core/packages/lunabot_hardware)
+[0.460s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_test_teensy' with build type 'ament_cmake'
+[0.460s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/lunabot_test_teensy'
+[0.460s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.460s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.476s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop -- -j4 -l4
+[0.482s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy -- -j4 -l4
+[0.572s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy -- -j4 -l4
+[0.576s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy
+[0.588s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_test_teensy)
+[0.588s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy' for CMake module files
+[0.588s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy' for CMake config files
+[0.589s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_test_teensy', 'cmake_prefix_path')
+[0.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/hook/cmake_prefix_path.ps1'
+[0.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/hook/cmake_prefix_path.dsv'
+[0.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/hook/cmake_prefix_path.sh'
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/bin'
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/lib/pkgconfig/lunabot_test_teensy.pc'
+[0.597s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/lib/python3.12/site-packages'
+[0.597s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/bin'
+[0.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.ps1'
+[0.601s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.dsv'
+[0.602s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.sh'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.bash'
+[0.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.zsh'
+[0.611s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/colcon-core/packages/lunabot_test_teensy)
+[0.612s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_test_teensy)
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy' for CMake module files
+[0.614s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy' for CMake config files
+[0.614s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_test_teensy', 'cmake_prefix_path')
+[0.618s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/hook/cmake_prefix_path.ps1'
+[0.619s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/hook/cmake_prefix_path.dsv'
+[0.619s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/hook/cmake_prefix_path.sh'
+[0.620s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/bin'
+[0.620s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/lib/pkgconfig/lunabot_test_teensy.pc'
+[0.620s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/lib/python3.12/site-packages'
+[0.623s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/bin'
+[0.623s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.ps1'
+[0.624s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.dsv'
+[0.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.sh'
+[0.625s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.bash'
+[0.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.zsh'
+[0.629s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/colcon-core/packages/lunabot_test_teensy)
+[0.630s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/micro_ros_setup' with build type 'ament_cmake'
+[0.630s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/micro_ros_setup'
+[0.630s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.630s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.644s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop -- -j4 -l4
+[0.645s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop
+[0.654s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup -- -j4 -l4
+[0.681s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_teleop)
+[0.681s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop' for CMake module files
+[0.682s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop' for CMake config files
+[0.682s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_teleop', 'cmake_prefix_path')
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/hook/cmake_prefix_path.ps1'
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/hook/cmake_prefix_path.dsv'
+[0.688s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop
+[0.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/hook/cmake_prefix_path.sh'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/bin'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib/pkgconfig/lunabot_teleop.pc'
+[0.693s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib/python3.12/site-packages'
+[0.694s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/bin'
+[0.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.ps1'
+[0.694s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.dsv'
+[0.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.sh'
+[0.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.bash'
+[0.699s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.zsh'
+[0.699s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/colcon-core/packages/lunabot_teleop)
+[0.700s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lunabot_teleop)
+[0.700s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop' for CMake module files
+[0.700s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop' for CMake config files
+[0.701s] Level 1:colcon.colcon_core.shell:create_environment_hook('lunabot_teleop', 'cmake_prefix_path')
+[0.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/hook/cmake_prefix_path.ps1'
+[0.701s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/hook/cmake_prefix_path.dsv'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/hook/cmake_prefix_path.sh'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/bin'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib/pkgconfig/lunabot_teleop.pc'
+[0.708s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib/python3.12/site-packages'
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/bin'
+[0.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.ps1'
+[0.710s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.dsv'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.sh'
+[0.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.bash'
+[0.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.zsh'
+[0.715s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/colcon-core/packages/lunabot_teleop)
+[0.733s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup -- -j4 -l4
+[0.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup
+[0.770s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_setup)
+[0.771s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup' for CMake module files
+[0.774s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup' for CMake config files
+[0.777s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_setup', 'cmake_prefix_path')
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/hook/cmake_prefix_path.ps1'
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/hook/cmake_prefix_path.dsv'
+[0.782s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/hook/cmake_prefix_path.sh'
+[0.784s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/lib'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/bin'
+[0.785s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/lib/pkgconfig/micro_ros_setup.pc'
+[0.786s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/lib/python3.12/site-packages'
+[0.787s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/bin'
+[0.789s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.ps1'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.dsv'
+[0.795s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.sh'
+[0.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.bash'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.zsh'
+[0.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/colcon-core/packages/micro_ros_setup)
+[0.803s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_setup)
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup' for CMake module files
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup' for CMake config files
+[0.809s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_setup', 'cmake_prefix_path')
+[0.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/hook/cmake_prefix_path.ps1'
+[0.812s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/hook/cmake_prefix_path.dsv'
+[0.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/hook/cmake_prefix_path.sh'
+[0.816s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/lib'
+[0.816s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/bin'
+[0.817s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/lib/pkgconfig/micro_ros_setup.pc'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/lib/python3.12/site-packages'
+[0.818s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/bin'
+[0.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.ps1'
+[0.821s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.dsv'
+[0.823s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.sh'
+[0.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.bash'
+[0.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/micro_ros_setup/package.zsh'
+[0.829s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_setup
+[0.830s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup/share/colcon-core/packages/micro_ros_setup)
+[0.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs -- -j4 -l4
+[0.954s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs
+[1.067s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs' for CMake module files
+[1.068s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs' for CMake config files
+[1.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_msgs
+[1.069s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[1.070s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[1.070s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[1.071s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[1.072s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib'
+[1.072s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[1.072s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[1.073s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[1.073s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[1.073s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/bin'
+[1.074s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[1.074s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib/python3.12/site-packages'
+[1.074s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'pythonpath')
+[1.074s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.ps1'
+[1.075s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.dsv'
+[1.075s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.sh'
+[1.076s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/bin'
+[1.076s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[1.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[1.078s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[1.078s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[1.079s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[1.079s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_msgs)
+[1.080s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs' for CMake module files
+[1.080s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs' for CMake config files
+[1.081s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'cmake_prefix_path')
+[1.081s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.ps1'
+[1.081s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.dsv'
+[1.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/cmake_prefix_path.sh'
+[1.082s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib'
+[1.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'ld_library_path_lib')
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.ps1'
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.dsv'
+[1.084s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/ld_library_path_lib.sh'
+[1.084s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/bin'
+[1.084s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib/pkgconfig/micro_ros_msgs.pc'
+[1.084s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib/python3.12/site-packages'
+[1.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_msgs', 'pythonpath')
+[1.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.ps1'
+[1.085s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.dsv'
+[1.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/hook/pythonpath.sh'
+[1.086s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/bin'
+[1.087s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.ps1'
+[1.088s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.dsv'
+[1.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.sh'
+[1.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.bash'
+[1.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/micro_ros_msgs/package.zsh'
+[1.090s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/share/colcon-core/packages/micro_ros_msgs)
+[1.091s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/micro-ROS-Agent/micro_ros_agent' with build type 'ament_cmake'
+[1.091s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/src/uros/micro-ROS-Agent/micro_ros_agent'
+[1.091s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.091s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.108s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent': CMAKE_PREFIX_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent -- -j4 -l4
+[1.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent' returned '0': CMAKE_PREFIX_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent -- -j4 -l4
+[1.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent': CMAKE_PREFIX_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent
+[1.231s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[1.232s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent' for CMake module files
+[1.232s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent' for CMake config files
+[1.232s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent' returned '0': CMAKE_PREFIX_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_setup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_hardware:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_msgs/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib:/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/micro_ros_agent
+[1.234s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[1.234s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[1.235s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[1.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[1.236s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib'
+[1.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'ld_library_path_lib')
+[1.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.ps1'
+[1.237s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.dsv'
+[1.240s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.sh'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/bin'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[1.241s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib/python3.12/site-packages'
+[1.243s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/bin'
+[1.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[1.245s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[1.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[1.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[1.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[1.247s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[1.247s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(micro_ros_agent)
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent' for CMake module files
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent' for CMake config files
+[1.248s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'cmake_prefix_path')
+[1.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.ps1'
+[1.249s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.dsv'
+[1.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/cmake_prefix_path.sh'
+[1.253s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib'
+[1.253s] Level 1:colcon.colcon_core.shell:create_environment_hook('micro_ros_agent', 'ld_library_path_lib')
+[1.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.ps1'
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.dsv'
+[1.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/hook/ld_library_path_lib.sh'
+[1.254s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/bin'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib/pkgconfig/micro_ros_agent.pc'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/lib/python3.12/site-packages'
+[1.256s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/bin'
+[1.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.ps1'
+[1.257s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.dsv'
+[1.257s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.sh'
+[1.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.bash'
+[1.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/micro_ros_agent/package.zsh'
+[1.259s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/micro_ros_agent/share/colcon-core/packages/micro_ros_agent)
+[2.477s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs -- -j4 -l4
+[2.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs
+[2.557s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drive_base_msgs)
+[2.558s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs' for CMake module files
+[2.558s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs' for CMake config files
+[2.559s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_base_msgs', 'cmake_prefix_path')
+[2.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/cmake_prefix_path.ps1'
+[2.560s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/cmake_prefix_path.dsv'
+[2.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/cmake_prefix_path.sh'
+[2.561s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib'
+[2.561s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_base_msgs', 'ld_library_path_lib')
+[2.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/ld_library_path_lib.ps1'
+[2.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/ld_library_path_lib.dsv'
+[2.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/ld_library_path_lib.sh'
+[2.562s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/bin'
+[2.562s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib/pkgconfig/drive_base_msgs.pc'
+[2.562s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib/python3.12/site-packages'
+[2.562s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_base_msgs', 'pythonpath')
+[2.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/pythonpath.ps1'
+[2.563s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/pythonpath.dsv'
+[2.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/pythonpath.sh'
+[2.564s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/bin'
+[2.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.ps1'
+[2.565s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.dsv'
+[2.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.sh'
+[2.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.bash'
+[2.566s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.zsh'
+[2.566s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/colcon-core/packages/drive_base_msgs)
+[2.567s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drive_base_msgs)
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs' for CMake module files
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs' for CMake config files
+[2.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/drive_base_msgs
+[2.569s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_base_msgs', 'cmake_prefix_path')
+[2.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/cmake_prefix_path.ps1'
+[2.570s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/cmake_prefix_path.dsv'
+[2.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/cmake_prefix_path.sh'
+[2.570s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib'
+[2.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_base_msgs', 'ld_library_path_lib')
+[2.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/ld_library_path_lib.ps1'
+[2.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/ld_library_path_lib.dsv'
+[2.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/ld_library_path_lib.sh'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/bin'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib/pkgconfig/drive_base_msgs.pc'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/lib/python3.12/site-packages'
+[2.572s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_base_msgs', 'pythonpath')
+[2.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/pythonpath.ps1'
+[2.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/pythonpath.dsv'
+[2.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/hook/pythonpath.sh'
+[2.574s] Level 1:colcon.colcon_core.environment:checking '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/bin'
+[2.574s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.ps1'
+[2.574s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.dsv'
+[2.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.sh'
+[2.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.bash'
+[2.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/drive_base_msgs/package.zsh'
+[2.576s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/drive_base_msgs/share/colcon-core/packages/drive_base_msgs)
+[2.576s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.576s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.576s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.576s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.583s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.583s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.583s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.602s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.602s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/local_setup.ps1'
+[2.603s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/_local_setup_util_ps1.py'
+[2.611s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/setup.ps1'
+[2.612s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/local_setup.sh'
+[2.613s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/_local_setup_util_sh.py'
+[2.613s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/setup.sh'
+[2.617s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/local_setup.bash'
+[2.619s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/setup.bash'
+[2.628s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/local_setup.zsh'
+[2.628s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/setup.zsh'
