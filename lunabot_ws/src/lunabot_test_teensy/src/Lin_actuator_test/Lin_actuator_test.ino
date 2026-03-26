@@ -1,22 +1,23 @@
-// Pin Definitions
-const int PWM_PIN = 18;  // Connect to Cytron PWM
-const int DIR_PIN = 19;  // Connect to Cytron DIR
+// Pin Definitions for Teensy 4.1
+const int PWM_PIN = 19;  // PWM pin
+const int DIR_PIN = 17;  // Direction pin
 
-// PWM Settings for New ESP32 Core (v3.0+)
+// PWM Settings
 const int pwmFreq = 5000;    // 5 kHz frequency
 const int pwmResolution = 8; // 8-bit resolution (0-255)
 
 void setup() {
   Serial.begin(115200);
   
-  // New ESP32 Core syntax: 
-  // ledcAttach(pin, frequency, resolution)
-  ledcAttach(PWM_PIN, pwmFreq, pwmResolution);
-  
-  // Configure Direction Pin
+  // Configure Pins
+  pinMode(PWM_PIN, OUTPUT);
   pinMode(DIR_PIN, OUTPUT);
   
-  Serial.println("ESP32 Actuator Emulator Ready (Core v3.0).");
+  // Set PWM Frequency and Resolution for Teensy
+  analogWriteFrequency(PWM_PIN, pwmFreq);
+  analogWriteResolution(pwmResolution);
+  
+  Serial.println("Teensy 4.1 Actuator Emulator Ready.");
   Serial.println("Commands: 'e' (Extend), 'r' (Retract), 's' (Stop)");
 }
 
@@ -50,11 +51,10 @@ void moveActuator(float command) {
     digitalWrite(DIR_PIN, LOW);
   }
 
-  // 2. Calculate PWM (0 to 255)
+  // 2. Calculate PWM (0 to 255 for 8-bit)
   int dutyCycle = abs(command) * 255;
   dutyCycle = constrain(dutyCycle, 0, 255);
   
-  // 3. New ESP32 Core syntax:
-  // ledcWrite(pin, dutyCycle)
-  ledcWrite(PWM_PIN, dutyCycle);
+  // 3. Standard Arduino/Teensy PWM command
+  analogWrite(PWM_PIN, dutyCycle);
 }
