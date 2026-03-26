@@ -1,0 +1,20 @@
+[0.018s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy -- -j4 -l4
+[0.074s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy -- -j4 -l4
+[0.075s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy
+[0.090s] -- Install configuration: ""
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/ament_index/resource_index/package_run_dependencies/lunabot_test_teensy
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/ament_index/resource_index/parent_prefix_path/lunabot_test_teensy
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/environment/ament_prefix_path.sh
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/environment/ament_prefix_path.dsv
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/environment/path.sh
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/environment/path.dsv
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/local_setup.bash
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/local_setup.sh
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/local_setup.zsh
+[0.090s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/local_setup.dsv
+[0.091s] -- Installing: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.dsv
+[0.091s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/ament_index/resource_index/packages/lunabot_test_teensy
+[0.091s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/cmake/lunabot_test_teensyConfig.cmake
+[0.091s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/cmake/lunabot_test_teensyConfig-version.cmake
+[0.091s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_test_teensy/share/lunabot_test_teensy/package.xml
+[0.122s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_test_teensy

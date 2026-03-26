@@ -1,0 +1,25 @@
+[0.015s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop -- -j4 -l4
+[0.106s] [ 50%] [32mBuilding CXX object CMakeFiles/joy_to_cmd_vel.dir/src/joy_to_cmd_vel.cpp.o[0m
+[8.133s] [100%] [32m[1mLinking CXX executable joy_to_cmd_vel[0m
+[8.571s] [100%] Built target joy_to_cmd_vel
+[8.581s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop -- -j4 -l4
+[8.582s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop
+[8.589s] -- Install configuration: ""
+[8.589s] -- Installing: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib/lunabot_teleop/joy_to_cmd_vel
+[8.593s] -- Set non-toolchain portion of runtime path of "/home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/lib/lunabot_teleop/joy_to_cmd_vel" to ""
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/ament_index/resource_index/package_run_dependencies/lunabot_teleop
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/ament_index/resource_index/parent_prefix_path/lunabot_teleop
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/ament_prefix_path.sh
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/ament_prefix_path.dsv
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/path.sh
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/environment/path.dsv
+[8.594s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.bash
+[8.595s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.sh
+[8.595s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.zsh
+[8.595s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/local_setup.dsv
+[8.595s] -- Installing: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.dsv
+[8.595s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/ament_index/resource_index/packages/lunabot_teleop
+[8.595s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/cmake/lunabot_teleopConfig.cmake
+[8.595s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/cmake/lunabot_teleopConfig-version.cmake
+[8.596s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_teleop/share/lunabot_teleop/package.xml
+[8.596s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop

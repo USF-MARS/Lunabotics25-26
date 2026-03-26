@@ -1,0 +1,9 @@
+[0.016s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop -- -j4 -l4
+[0.098s] [ 50%] [32m[1mLinking CXX executable joy_to_cmd_vel[0m
+[0.351s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[0.351s] (.text+0x1b): undefined reference to `main'
+[0.357s] collect2: error: ld returned 1 exit status
+[0.358s] gmake[2]: *** [CMakeFiles/joy_to_cmd_vel.dir/build.make:186: joy_to_cmd_vel] Error 1
+[0.358s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/joy_to_cmd_vel.dir/all] Error 2
+[0.359s] gmake: *** [Makefile:146: all] Error 2
+[0.360s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_teleop -- -j4 -l4

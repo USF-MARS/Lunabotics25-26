@@ -42,3 +42,11 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr lift_publisher_;
 };
+
+int main(int argc, char * argv[])
+{
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<JoyToCmdVel>());
+  rclcpp::shutdown();
+  return 0;
+}
