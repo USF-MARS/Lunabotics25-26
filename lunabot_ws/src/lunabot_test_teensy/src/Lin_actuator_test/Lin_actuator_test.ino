@@ -142,7 +142,7 @@ void setup() {
 
   RCCHECK(rclc_subscription_init_default(
     &lift_sub, &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "lift_actuator"));
+    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32), "/lift_actuator"));
 
   // --- Initialize Executor (2 Handles) ---
   RCCHECK(rclc_executor_init(&executor, &support.context, 2, &allocator));
