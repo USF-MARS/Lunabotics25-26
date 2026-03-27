@@ -1,0 +1,22 @@
+[0.023s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup -- -j4 -l4
+[0.075s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup -- -j4 -l4
+[0.084s] Invoking command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup
+[0.094s] -- Install configuration: ""
+[0.094s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/launch
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/launch/bringup.launch.py
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/ament_index/resource_index/package_run_dependencies/lunabot_bringup
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/ament_index/resource_index/parent_prefix_path/lunabot_bringup
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/environment/ament_prefix_path.sh
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/environment/ament_prefix_path.dsv
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/environment/path.sh
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/environment/path.dsv
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/local_setup.bash
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/local_setup.sh
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/local_setup.zsh
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/local_setup.dsv
+[0.095s] -- Installing: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.dsv
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/ament_index/resource_index/packages/lunabot_bringup
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/cmake/lunabot_bringupConfig.cmake
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/cmake/lunabot_bringupConfig-version.cmake
+[0.095s] -- Up-to-date: /home/mars/Documents/Lunabotics25-26/lunabot_ws/install/lunabot_bringup/share/lunabot_bringup/package.xml
+[0.098s] Invoked command in '/home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mars/Documents/Lunabotics25-26/lunabot_ws/build/lunabot_bringup
