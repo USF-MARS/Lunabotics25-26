@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -26,8 +27,12 @@ endif()
 add_executable(joy_to_cmd_vel src/joy_to_cmd_vel.cpp)
 ament_target_dependencies(joy_to_cmd_vel rclcpp sensor_msgs geometry_msgs)
 
+add_executable(joy_mode_switch src/joy_mode_switch.cpp)
+ament_target_dependencies(joy_mode_switch rclcpp sensor_msgs std_msgs)
+
 install(TARGETS
   joy_to_cmd_vel
+  joy_mode_switch
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

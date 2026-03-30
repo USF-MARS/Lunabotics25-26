@@ -1,3 +1,22 @@
+// lunabot_arbitration — Arbitration node (see package README.md in this repo for the full topic map).
+//
+// Design intent (team / operator requirements):
+// 1) Automation mode: When the operator enables automation (e.g. Menu button publishes /mode_switch true
+//    via lunabot_teleop/joy_mode_switch), Nav2 (or similar) commands on /cmd_vel_nav are forwarded only
+//    while auto is allowed (see can_auto_publish()).
+// 2) Connection loss (Foxglove bridge down, /joy or teleop stream gone, etc.): If no valid command updates
+//    the failsafe watchdog for failsafe_timeout seconds, publish zero Twist on /cmd_vel. Extend this
+//    node if you also need zeros on /cmd_tilt_actuator and /cmd_lift_actuator on timeout.
+// 3) Manual override during auto: Any message on /cmd_vel_teleop, /cmd_tilt_actuator_teleop, or
+//    /cmd_lift_actuator_teleop refreshes last_teleop_time_; while override_duration has not elapsed,
+//    autonomous inputs are not forwarded (operator "wins").
+// 4) Emergency stop: Publish geometry_msgs/Twist on /cmd_STOP_teleop (e.g. from a Foxglove button or a
+//    controller mapping). stop_callback() forwards to /cmd_STOP and forces zero velocity on /cmd_vel.
+//    micro-ROS on the Teensy also watchdog-stops drive if /cmd_vel stops arriving (see lunabot_hardware).
+//
+// Note: Teleop nodes must publish to the *_teleop topics above, not directly to /cmd_vel, when this node
+// is in the launch graph; otherwise arbitration is bypassed.
+
 #include <chrono>
 #include <memory>
 #include <string>
