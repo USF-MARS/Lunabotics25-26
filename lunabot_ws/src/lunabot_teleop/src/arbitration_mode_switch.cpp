@@ -5,7 +5,7 @@
 #include "sensor_msgs/msg/joy.hpp"
 #include "std_msgs/msg/bool.hpp"
 
-// joy_mode_switch — publishes std_msgs/Bool on /mode_switch for lunabot_arbitration.
+// arbitration_mode_switch — publishes std_msgs/Bool on /mode_switch for lunabot_arbitration.
 //
 // Team instructions (how this fits the stack):
 // - Automation: Operator presses a button such as Menu; each rising edge toggles /mode_switch so the
@@ -20,19 +20,19 @@
 //
 // Button index is controller-specific; use `ros2 topic echo /joy` while pressing Menu, then set
 // `menu_button_index` if the default does not match your gamepad.
-class JoyModeSwitch : public rclcpp::Node {
+class ArbitrationModeSwitch : public rclcpp::Node {
 public:
-  JoyModeSwitch() : Node("joy_mode_switch") {
+  ArbitrationModeSwitch() : Node("arbitration_mode_switch") {
     this->declare_parameter("menu_button_index", 7);
     menu_button_index_ = static_cast<size_t>(this->get_parameter("menu_button_index").as_int());
 
     pub_ = this->create_publisher<std_msgs::msg::Bool>("/mode_switch", 10);
     sub_ = this->create_subscription<sensor_msgs::msg::Joy>(
-      "/joy", 10, std::bind(&JoyModeSwitch::joy_callback, this, std::placeholders::_1));
+      "/joy", 10, std::bind(&ArbitrationModeSwitch::joy_callback, this, std::placeholders::_1));
 
     RCLCPP_INFO(
       this->get_logger(),
-      "joy_mode_switch: toggle Menu -> /mode_switch (menu_button_index=%zu)",
+      "arbitration_mode_switch: toggle Menu -> /mode_switch (menu_button_index=%zu)",
       menu_button_index_);
   }
 
@@ -76,7 +76,7 @@ private:
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<JoyModeSwitch>());
+  rclcpp::spin(std::make_shared<ArbitrationModeSwitch>());
   rclcpp::shutdown();
   return 0;
 }

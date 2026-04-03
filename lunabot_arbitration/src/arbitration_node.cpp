@@ -2,7 +2,7 @@
 //
 // Design intent (team / operator requirements):
 // 1) Automation mode: When the operator enables automation (e.g. Menu button publishes /mode_switch true
-//    via lunabot_teleop/joy_mode_switch), Nav2 (or similar) commands on /cmd_vel_nav are forwarded only
+//    via lunabot_teleop/arbitration_mode_switch), Nav2 (or similar) commands on /cmd_vel_nav are forwarded only
 //    while auto is allowed (see can_auto_publish()).
 // 2) Connection loss (Foxglove bridge down, /joy or teleop stream gone, etc.): If no valid command updates
 //    the failsafe watchdog for failsafe_timeout seconds, publish zero Twist on /cmd_vel. Extend this

@@ -1,7 +1,7 @@
 """Rover bringup: Foxglove bridge, micro-ROS agent, teleop, joy -> /mode_switch.
 
 Stack intent (see lunabot_arbitration and README there):
-- Menu (joy_mode_switch) toggles /mode_switch so the operator can enter automation when arbitration
+- Menu (arbitration_mode_switch) toggles /mode_switch so the operator can enter automation when arbitration
   and Nav2 are wired to /cmd_vel_nav and teleop uses *_teleop topics.
 - Emergency stop and zeros: configure Foxglove (or teleop) to publish geometry_msgs/Twist on
   /cmd_STOP_teleop; arbitration forwards stop and zeros /cmd_vel.
@@ -41,10 +41,10 @@ def generate_launch_description():
     )
 
     # 4. Menu button -> /mode_switch (for lunabot_arbitration)
-    joy_mode_switch = Node(
+    arbitration_mode_switch = Node(
         package='lunabot_teleop',
-        executable='joy_mode_switch',
-        name='joy_mode_switch',
+        executable='arbitration_mode_switch',
+        name='arbitration_mode_switch',
         output='screen'
     )
 
@@ -52,5 +52,5 @@ def generate_launch_description():
         foxglove_bridge,
         microros_agent,
         teleop_node,
-        joy_mode_switch
+        arbitration_mode_switch
     ])
