@@ -27,8 +27,12 @@ def generate_launch_description():
     )
 
     # 2. Micro-ROS Agent (Running as a process)
+    # Update the cmd list with the full path to the executable
     microros_agent = ExecuteProcess(
-        cmd=['ros2', 'run', 'micro_ros_agent', 'micro_ros_agent', 'serial', '--dev', '/dev/ttyACM0'],
+        cmd=[
+            os.path.expanduser('~/microros_ws/install/micro_ros_agent/lib/micro_ros_agent/micro_ros_agent'), 
+            'serial', '--dev', '/dev/ttyACM0'
+        ],
         output='screen'
     )
 
