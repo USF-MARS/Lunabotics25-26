@@ -16,47 +16,38 @@ public:
 
 private:
     void joy_callback(const sensor_msgs::msg::Joy::SharedPtr msg) const {
-        // --- 1. Handle Drive (Twist) ---
         auto twist = geometry_msgs::msg::Twist();
-        
-        // Basic deadzone logic (0.05) to prevent drifting
-        double linear_val = msg->axes[1];
-        double angular_val = msg->axes[3];
-
-        twist.linear.x = (std::abs(linear_val) > 0.05) ? linear_val * 1.0 : 0.0;
-        twist.angular.z = (std::abs(angular_val) > 0.05) ? angular_val * -1.0 : 0.0;
-        
-        drive_publisher_->publish(twist);
-
-        // --- 2. Handle Arm Logic ---
         auto arm_msg = std_msgs::msg::Int32();
-        
-        // Using Buttons 5 (R1) and 4 (L1) as per your original code
-        if (msg->buttons[5] == 1) {
-            arm_msg.data = 1;  // Extend
-        } 
-        else if (msg->buttons[4] == 1) {
-            arm_msg.data = -1; // Retract
-        } 
-        else {
-            arm_msg.data = 0;  // Stop
-        }
-        arm_publisher_->publish(arm_msg);
-
-        // --- 3. Handle Bucket Logic ---
         auto bucket_msg = std_msgs::msg::Int32();
 
-        // Added Bucket Logic: Using Buttons 0 and 1 as placeholders
-        // Change these indices once you know which buttons you prefer!
-        if (msg->buttons[0] == 1) {
-            bucket_msg.data = 1;  // Extend/Dump
+        // --- STOP BUTTON LOGIC (Index 8) ---
+        // Safety: If index 8 is pressed, force stop everything and skip processing
+        if (msg->buttons.size() > 8 && msg->buttons[8] == 1) {
+            drive_publisher_->publish(twist); // Sends zeros
+            arm_msg.data = 0;
+            arm_publisher_->publish(arm_msg);
+            bucket_msg.data = 0;
+            bucket_publisher_->publish(bucket_msg);
+            return; 
         }
-        else if (msg->buttons[1] == 1) {
-            bucket_msg.data = -1; // Retract/Tilt
-        }
-        else {
-            bucket_msg.data = 0;  // Stop
-        }
+
+        // --- Drive Logic ---
+        double linear_val = msg->axes[1];
+        double angular_val = msg->axes[3];
+        twist.linear.x = (std::abs(linear_val) > 0.05) ? linear_val * 1.0 : 0.0;
+        twist.angular.z = (std::abs(angular_val) > 0.05) ? angular_val * -1.0 : 0.0;
+        drive_publisher_->publish(twist);
+
+        // --- Arm Logic (Buttons 5/4) ---
+        if (msg->buttons[5] == 1) arm_msg.data = 1;
+        else if (msg->buttons[4] == 1) arm_msg.data = -1;
+        else arm_msg.data = 0;
+        arm_publisher_->publish(arm_msg);
+
+        // --- Bucket Logic (Buttons 0/1) ---
+        if (msg->buttons[0] == 1) bucket_msg.data = 1;
+        else if (msg->buttons[1] == 1) bucket_msg.data = -1;
+        else bucket_msg.data = 0;
         bucket_publisher_->publish(bucket_msg);
     }
 
@@ -66,8 +57,7 @@ private:
     rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr bucket_publisher_;
 };
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<JoyToCmdVel>());
   rclcpp::shutdown();
