@@ -22,7 +22,7 @@ private:
 
         // --- STOP BUTTON LOGIC (Index 8) ---
         // Safety: If index 8 is pressed, force stop everything and skip processing
-        if (msg->buttons.size() > 8 && msg->buttons[8] == 1) {
+        if (msg->buttons.size() > 9 && msg->buttons[9] == 1) {
             drive_publisher_->publish(twist); // Sends zeros
             arm_msg.data = 0;
             arm_publisher_->publish(arm_msg);
